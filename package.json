@@ -18,6 +18,7 @@
   "homepage": "https://github.com/alexanderjardim/airline-data-appplication#readme",
   "dependencies": {
     "@hapi/joi": "^17.1.0",
+    "bunyan": "^1.8.12",
     "mocha": "^7.0.0"
   }
 }

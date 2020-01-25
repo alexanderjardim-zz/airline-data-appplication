@@ -6,7 +6,10 @@ describe('Airlines model', () => {
     describe('#constructor', () =>{
         it('should create valid airline object', () =>{
             let a = new AirlineModel(samples.validAirline);
-            assert.equal(a, true);
+            assert.equal(a.name, samples.validAirline.name);
         });
     });
+        it('should thow error due to invalid airline entry', () => {
+            let a = new AirlineModel(samples.invalidAirline);
+        });
 });
