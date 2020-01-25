@@ -10,6 +10,8 @@ describe('Airlines model', () => {
         });
     });
         it('should thow error due to invalid airline entry', () => {
-            let a = new AirlineModel(samples.invalidAirline);
+            assert.throws(() => {
+                let a = new AirlineModel(samples.invalidAirline);
+            });
         });
 });

@@ -9,11 +9,11 @@ module.exports = class AirlineModel {
             name: Joi.string(),
             alias: Joi.string(),
             IATA: Joi.string()
-                .minimum(2)
-                .maximum(2),
+                .min(2)
+                .max(2),
             ICAO: Joi.string()
-                .minimum(3)
-                .maximum(3),
+                .min(3)
+                .max(3),
             callSign: Joi.string(),
             country: Joi.string(),
             active: Joi.string()
@@ -22,19 +22,20 @@ module.exports = class AirlineModel {
 
     constructor(airlineData) {
         log.debug(`Airline data received to build entity => ${JSON.stringify(airlineData)}`);
-        try {
-            this.schema().validate(airlineData);
-            this.id = airlineData.id;
-            this.name = airlineData.name;
-            this.alias = airlineData.alias;
-            this.IATA = airlineData.IATA;
-            this.ICAO = airlineData.ICAO;
-            this.callSign = airlineData.callSign;
-            this.country = airlineData.country;
-            this.active = airlineData.active;
-        } catch(e) {
-            log.error(`Could not create Airline entity`, e);
+
+        const result = this.schema().validate(airlineData);
+        if (result.error) {
+            throw Error(result.error.message);
         }
+        
+        this.id = airlineData.id;
+        this.name = airlineData.name;
+        this.alias = airlineData.alias;
+        this.IATA = airlineData.IATA;
+        this.ICAO = airlineData.ICAO;
+        this.callSign = airlineData.callSign;
+        this.country = airlineData.country;
+        this.active = airlineData.active;
 
     }
 
