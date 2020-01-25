@@ -1,0 +1,19 @@
+{
+  "name": "airline-data-appplication",
+  "version": "1.0.0",
+  "description": "Airline data processing showcase",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexanderjardim/airline-data-appplication.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexanderjardim/airline-data-appplication/issues"
+  },
+  "homepage": "https://github.com/alexanderjardim/airline-data-appplication#readme"
+}
