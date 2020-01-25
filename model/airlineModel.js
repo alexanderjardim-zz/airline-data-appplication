@@ -7,16 +7,30 @@ module.exports = class AirlineModel {
         return Joi.object({
             id: Joi.number(),
             name: Joi.string(),
-            alias: Joi.string(),
+            alias: Joi.string()
+                .allow(''),
             IATA: Joi.string()
-                .min(2)
-                .max(2),
+                .allow(''),
             ICAO: Joi.string()
-                .min(3)
-                .max(3),
-            callSign: Joi.string(),
-            country: Joi.string(),
+                .allow(''),
+            callSign: Joi.string()
+                .allow(''),
+            country: Joi.string()
+                .allow(''),
             active: Joi.string()
+        });
+    }
+
+    static fromArray(airlineArray) {
+        return new AirlineModel({
+            id: airlineArray[0],
+            name: airlineArray[1],
+            alias: airlineArray[2],
+            IATA: airlineArray[3],
+            ICAO: airlineArray[4],
+            callSign: airlineArray[5],
+            country: airlineArray[6],
+            active: airlineArray[7]
         });
     }
 
