@@ -11,7 +11,7 @@ const  samples = {
     },
     invalidAirline : {
         id: 1,
-        name: "A Sample Airline",
+        name: "",
         alias: "",
         IATA: "ASAAAA",
         ICAO: "ASA",
