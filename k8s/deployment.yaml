@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: airline-data-deployment
+  namespace: airline-data
+  labels:
+    app: airline-data
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: airline-data
+  template:
+    metadata:
+      labels:
+        app: airline-data
+    spec:
+      containers:
+      - name: airline-data
+        image: "us.gcr.io/airline-data-266316/quantum/airline-data:latest"
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: airline-data-config

@@ -1,0 +1,9 @@
+---
+apiVersion: v1
+data:
+  ENVIRONMENT: 'production'
+  PROJECT: 'airline-data-266316'
+kind: ConfigMap
+metadata:
+  name: airline-data-config
+  namespace: airline-data
