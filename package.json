@@ -4,7 +4,7 @@
   "description": "Airline data processing showcase",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive"
+    "test": "./node_modules/mocha/bin/mocha --recursive"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,10 @@
     "@hapi/joi": "^17.1.0",
     "bunyan": "^1.8.12",
     "fast-csv": "^4.0.2",
-    "mocha": "^7.0.0"
+    "mocha": "^7.0.0",
+    "mongoose": "^5.8.9",
+    "restify": "^8.5.1",
+    "restify-errors": "^8.0.2",
+    "restify-paginate": "0.0.5"
   }
 }

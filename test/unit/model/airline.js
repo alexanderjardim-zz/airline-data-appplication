@@ -1,4 +1,4 @@
-const AirlineModel = require('../../../model/airline');
+const AirlineModel = require('../../../model/airlineModel');
 const samples = require('../../airlineSamples');
 const assert = require('assert');
 

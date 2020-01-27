@@ -39,7 +39,7 @@ module.exports = class AirlineModel {
 
         const result = this.schema().validate(airlineData);
         if (result.error) {
-            throw Error(result.error.message);
+            throw new Error(result.error.message);
         }
         
         this.id = airlineData.id;
