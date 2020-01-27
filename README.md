@@ -1,19 +1,19 @@
 # airline-data-appplication
 Airline data processing showcase
 
-##Development
+## Development
 ```shell
 npm install
 npm test
 ```
 
-##Build
+## Build
 ```shell
 docker build -t quantum/airline-data .
 docker run --rm -ti -p 8080:8080 quantum/airline-data
 ```
 
-##Deployment
+## Deployment
 ```shell
 kubectl apply -f k8s/namespace.yaml
 kubectl apply -f k8s/confimap-prd.yaml
