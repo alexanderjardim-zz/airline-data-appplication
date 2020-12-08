@@ -19,7 +19,7 @@
   "dependencies": {
     "@hapi/joi": "^17.1.0",
     "bunyan": "^1.8.12",
-    "fast-csv": "^4.0.2",
+    "fast-csv": "^4.3.6",
     "mocha": "^7.0.0",
     "mongoose": "^5.8.9",
     "restify": "^8.5.1",
