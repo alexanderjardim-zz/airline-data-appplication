@@ -20,7 +20,7 @@
     "@hapi/joi": "^17.1.0",
     "bunyan": "^1.8.12",
     "fast-csv": "^4.0.2",
-    "mocha": "^7.0.0",
+    "mocha": "^10.2.0",
     "mongoose": "^5.8.9",
     "restify": "^8.5.1",
     "restify-errors": "^8.0.2",
